@@ -94,6 +94,7 @@
 		   for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id == newId) {
 				isDuplicate = true;
+				break;
 			}
 		}
 		}

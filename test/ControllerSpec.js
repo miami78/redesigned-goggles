@@ -63,7 +63,7 @@ describe('controller', function () {
 		var todo = { title: "my todo"}
 		setUpModel([todo]);
 
-		subject.setView("/");
+		subject.setView("");
 
 		expect(view.render).toHaveBeenCalledWith("showEntries", [todo]);
 	});
@@ -175,7 +175,9 @@ describe('controller', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
 			var todo = {id: 35, title: 'my todo', completed: false};
-			setUpModel([todo]);
+			var todo2 = {id: 12, title: 'my todo2', completed: true};
+			var todo3 = {id: 50, title: 'my todo3', completed: false};
+			setUpModel([todo,todo2,todo3]);
 
 			subject.setView('');
 
